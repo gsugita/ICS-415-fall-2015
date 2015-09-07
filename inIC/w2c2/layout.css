@@ -1,0 +1,43 @@
+
+header
+{
+    border:1px solid black;
+    margin: 5px;
+    text-align:center;
+    padding: 10px;
+}
+nav{
+    display: inline-block;
+    margin:5px;
+    border:1px solid black;
+    height: 100px;
+    width:20vw;
+    float:left;
+    text-align:center;
+}
+
+section{
+    diplay: inline-block;
+    margin: 5px;
+    border:1px solid black;
+    height: 100px;
+    width:70vw;
+    float:left;
+    padding: 5px;
+}
+
+footer {
+    clear:both;
+    text-align:center;
+}
+
+#borderline {
+    outline:1px solid black;
+}
+ #rightside{
+     float:right;
+ }
+
+ #leftside{
+     float:left;
+ }
