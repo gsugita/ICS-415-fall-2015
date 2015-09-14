@@ -1,0 +1,40 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+
+.nav-tabs{
+    width:100%;
+    height: 50px;
+}
+
+.content-left{
+    border-right: 1px solid red;
+}
+
+.content-right{
+    border-left: 1px solid red;
+}
+
+header{
+    height:20%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+footer{
+    width:100%;
+    height:50px;
+    margin:0;
+    padding: 0;
+}
