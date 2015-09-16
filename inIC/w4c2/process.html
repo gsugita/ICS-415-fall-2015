@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <script>
+            function getParam(){
+                var params = {};
+                var pairs = document.URL.split('?').pop().split('&');
+                for (var i = 0, p; i < pairs.length;i++){
+                    p = pairs[i].split('=');
+                    params [p[0]] = p[1];
+                }
+                return params;
+            }
+
+            params = getParams();
+            document.write("Username ="+ (params["username"]) + <br>)
+        </script>
+
+    </div>
+</body>
+</html>

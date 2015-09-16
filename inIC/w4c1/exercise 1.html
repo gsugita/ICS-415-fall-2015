@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div onmouseenter="mouseEnter(this)" class="container">
+    <header><h1>Mouse Over</h1></header>
+
+    <div class="row">
+            mouse click
+            <p>
+            <button type="button" onclick="mouseClick()">Click Me</button>
+            </p>
+            <p id="clickMe"></p>
+    </div>
+    <hr>
+    <footer>
+        Footer
+    </footer>
+    <hr>
+</div>
+<script>
+    function mouseEnter(x){
+        x.style.backgroundcolor="red";
+        console.log("hello");
+    }
+    function mouseLeave(x){
+        x.bgcolor="white";
+    }
+    function mouseClick(){
+        document.getelementbyid("clickMe").innerHTML = "CLICK CLICK";
+    }
+</script>
+</body>
+</html>
