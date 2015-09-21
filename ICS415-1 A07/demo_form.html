@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" type="text/css" href="layout.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class = "container">
+<form name="myForm" action="demo_form.html" onsubmit="return validateForm()" method="get">
+    <div class="form-group">
+        <label for="username" id="userCheck">User name: </label>
+        <input type="text" name="name" id="username" style="border-color: black">
+        <span id="usernameCheck" class ="confirmCheck"></span>
+    </div>
+    <div class="form-group">
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" style="border-color: black">
+        <span id="emailCheck" class ="confirmCheck"></span>
+    </div>
+    <div class="form-group">
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" style="border-color: black">
+        <span id="passwordCheck" class ="confirmCheck"></span>
+    </div>
+    <div class="form-group">
+        <label for="confirm">Confirm Password: </label>
+        <input type="password" name="confirm" id="confirm" style="border-color: black">
+        <span id="confirmCheck" class ="confirmCheck"></span>
+        <span id="passCheck" class="passCheck"></span>
+    </div>
+    <input type="submit" value="Submit">
+</form>
+</div>
+
+<script>
+    function validateForm(){
+        var okay = true;
+        var userName = document.getElementById ("username");
+        var eMail = document.getElementById ("email");
+        var pass1= document.getElementById("password");
+        var pass2= document.getElementById("confirm");
+        var passCheck = document.getElementById ("passCheck");
+
+        if (userName.value == ""){
+            userName.style.borderColor = "red";
+            document.getElementById ("usernameCheck").style.color = "red";
+            document.getElementById ("usernameCheck").innerHTML = "Enter a Username";
+            okay = false;
+        }else{
+            userName.style.borderColor = "black";
+            document.getElementById ("usernameCheck").innerHTML = "";
+        }
+
+        if (eMail.value == ""){
+            eMail.style.borderColor = "red";
+            document.getElementById ("emailCheck").style.color = "red";
+            document.getElementById ("emailCheck").innerHTML = "Enter an Email Adress";
+            okay = false;
+        }else{
+            eMail.style.borderColor = "black";
+            document.getElementById ("emailCheck").innerHTML = "";
+        }
+
+        if (pass1.value == ""){
+            pass1.style.borderColor = "red";
+            document.getElementById ("passwordCheck").style.color = "red";
+            document.getElementById ("passwordCheck").innerHTML = "Enter an Password";
+            okay = false;
+        }else{
+            pass1.style.borderColor = "black";
+            document.getElementById ("passwordCheck").innerHTML = "";
+        }
+
+        if (pass2.value == ""){
+            pass2.style.borderColor = "red";
+            document.getElementById ("confirmCheck").style.color = "red";
+            document.getElementById ("confirmCheck").innerHTML = "Enter an Password";
+            okay = false;
+        }else{
+            pass2.style.borderColor = "black";
+            document.getElementById ("confirmCheck").innerHTML = "";
+        }
+
+        if(pass1.value != pass2.value || pass2.value == "" || pass1.value == ""){
+            pass2.style.borderColor = "red";
+            document.getElementById ("passCheck").style.color = "red";
+            document.getElementById ("passCheck").innerHTML = "Passwords do not match";
+            okay = false;
+        }else{
+            pass2.style.borderColor = "black";
+            document.getElementById ("confirmCheck").innerHTML = "";
+        }
+
+        return okay;
+    }
+</script>
+
+</body>
+</html>
