@@ -10,22 +10,26 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <script>
-            function getParam(){
-                var params = {};
-                var pairs = document.URL.split('?').pop().split('&');
-                for (var i = 0, p; i < pairs.length;i++){
-                    p = pairs[i].split('=');
-                    params [p[0]] = p[1];
-                }
-                return params;
-            }
+    <p>A Clickable Button</p>
+    <button>A Button </button>
+    <p id="tester">Moo? </p>
+    <hr>
 
-            params = getParams();
-            document.write("Username ="+ (params["username"]) + <br>)
-        </script>
-
+    <div id="first" style="border: solid black">
+        Something
     </div>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#tester").hide();
+        });
+    });
+
+    $(document).ready(function(){
+        $("#first").onmouseover(function(){
+            $("#first").append("<div>Mouse Over</div>");
+        });
+    });
+</script>
 </body>
 </html>
