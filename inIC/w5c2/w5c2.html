@@ -9,27 +9,45 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
-<body>
-    <p>A Clickable Button</p>
-    <button>A Button </button>
-    <p id="tester">Moo? </p>
-    <hr>
+<div>
+< id="test">
+<p>A Clickable Button</p>
+<button id ="hider">A Button </button>
+<button id="shower">B Button</button>
+<p id="tester">Moo? </p>
+<hr>
 
-    <div id="first" style="border: solid black">
-        Something
-    </div>
+
+
+<div id="first" style="border: solid black">
+    Something
+</div>
+
 <script>
     $(document).ready(function(){
-        $("button").click(function(){
+        $("#hider").click(function(){
             $("#tester").hide();
         });
     });
+
+    $(document).ready(function(){
+        $("#shower").click(function(){
+            $("#tester").show();
+        });
+    });
+
+    $.get("form.html",name = "name"){
+        $("body")
+                .append()
+    };
 
     $(document).ready(function(){
         $("#first").onmouseover(function(){
             $("#first").append("<div>Mouse Over</div>");
         });
     });
-</script>
-</body>
+    </script>
+</div>
+
+</div>
 </html>

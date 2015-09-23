@@ -10,26 +10,10 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <p>A Clickable Button</p>
-    <button>A Button </button>
-    <p id="tester">Moo? </p>
-    <hr>
+    <div id="loader"></div>
 
-    <div id="first" style="border: solid black">
-        Something
-    </div>
-<script>
-    $(document).ready(function(){
-        $("button").click(function(){
-            $("#tester").hide();
-        });
-    });
-
-    $(document).ready(function(){
-        $("#first").onmouseover(function(){
-            $("#first").append("<div>Mouse Over</div>");
-        });
-    });
-</script>
+    <script>
+        $("#loader").load("w5c2.html #test");
+    </script>
 </body>
 </html>
