@@ -1,0 +1,166 @@
+<head>
+  <title>ICS415final</title>
+</head>
+
+<body>
+
+
+</body>
+
+<template name="home">
+  <div class="container">
+
+    <header>
+
+      <h1>Random Home Page</h1>
+
+      <label class="hide-completed">{{> loginButtons}}</label>
+
+      <h4>
+      <li>
+        <a href="/">Home</a>
+        <a href="/chat">Chat</a>
+        <a href="/list">List</a>
+        <a href="/info">Info</a>
+      </li>
+      </h4>
+
+
+    </header>
+
+    <img class="displayed" src="/hawaii.png"/>
+
+  </div>
+
+</template>
+
+<template name="chat">
+  <div class="container">
+
+    <header>
+
+      <h1>Chat Page</h1>
+
+      <label class="hide-completed">{{> loginButtons}}</label>
+
+      <h4>
+        <li>
+          <a href="/">Home</a>
+          <a href="/chat">Chat</a>
+          <a href="/list">List</a>
+          <a href="/info">Info</a>
+        </li>
+      </h4>
+
+      {{#if currentUser}}
+
+      <form class="new-task">
+        <input type="text" name="text" placeholder="Type to chat" />
+      </form>
+      {{/if}}
+
+    </header>
+
+    <ul>
+      {{#each tasks}}
+      {{> task}}
+      {{/each}}
+    </ul>
+
+  </div>
+
+</template>
+
+
+<template name="list">
+  <div class="container">
+
+    <header>
+
+      <h1>List Page</h1>
+
+      <label class="hide-completed">{{> loginButtons}}</label>
+
+      <h4>
+        <li>
+          <a href="/">Home</a>
+          <a href="/chat">Chat</a>
+          <a href="/list">List</a>
+          <a href="/info">Info</a>
+        </li>
+      </h4>
+
+      {{#if currentUser}}
+      <form class="new-item">
+        <input type="text" name="text" placeholder="Type to create List" />
+      </form>
+      {{/if}}
+
+    </header>
+
+    <ul>
+      {{#each items}}
+      {{> item}}
+      {{/each}}
+    </ul>
+
+  </div>
+
+
+</template>
+
+
+<template name="info">
+
+  <div class="container">
+
+    <header>
+
+      <h1>Info Page</h1>
+
+      <label class="hide-completed">{{> loginButtons}}</label>
+
+      <h4>
+        <li>
+          <a href="/">Home</a>
+          <a href="/chat">Chat</a>
+          <a href="/list">List</a>
+          <a href="/info">Info</a>
+        </li>
+      </h4>
+
+    </header>
+
+    <div name="info-page">
+    <p><h1>Items that went into creating this website</h1></p>
+    <p>This website is primarily created using the web development tool Meteor which contains.</p>
+    <ul>
+      <li>- HTML</li>
+      <li>- CSS</li>
+      <li>- Java Script</li>
+      <li>- Mongo DB</li>
+      <li>- IntelliJ</li>
+    </ul>
+    </div>
+
+  </div>
+
+</template>
+
+<template name="task">
+
+  <li>
+    <button class="delete">&times;</button>
+    <span class="text"><strong>{{username}}</strong> - {{text}}</span>
+  </li>
+
+</template>
+
+<template name="item">
+
+  <li>
+    <button class="delete">&times;</button>
+    <span class="text">{{text}}</span>
+  </li>
+
+</template>
